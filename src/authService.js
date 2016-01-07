@@ -59,14 +59,14 @@ export class AuthService {
       });
   }
 
-  login(email, password) {
+  login(username, password) {
     var loginUrl = this.auth.getLoginUrl();
     var content;
     if (typeof arguments[1] !== 'string') {
       content = arguments[0];
     } else {
       content = {
-        'email': email,
+        'username': username,
         'password': password
       };
     }
